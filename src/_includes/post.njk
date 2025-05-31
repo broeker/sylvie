@@ -1,0 +1,11 @@
+{% extends "base.njk" %}
+{% block content %}
+  <h1>{{ title }}</h1>xxx
+  <p><em>{{ date | date("MMMM d, yyyy") }}</em></p>
+
+  {% if image %}
+    <img src="{{ image }}" alt="{{ title }}" style="max-width: 100%; height: auto;">
+  {% endif %}
+
+  {{ content | safe }}
+{% endblock %}
