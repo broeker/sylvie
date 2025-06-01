@@ -5,11 +5,10 @@
   <div class="text-center text-gray-500 font-montserrat mb-32">
     {{ description }}
   </div>
-  <div class="mr-32 ml-32">
+  <div class="mr-64 ml-64">
    {{ content | safe }}
   </div>
   </div>
-{% endblock %}
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -46,3 +45,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
+
+{% endblock %}
