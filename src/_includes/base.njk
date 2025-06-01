@@ -4,18 +4,76 @@
   <meta charset="UTF-8">
   <title>{{ title }}</title>
   <link rel="stylesheet" href="/assets/styles/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="/">Work</a> |
-    <a href="/about/">About</a> |
-    <a href="/contact/">Contact</a>
-  </nav>
 
+<div id="header" class="relative z-20 w-full h-auto flex items-center justify-between p-4 border-b-1 mb-20 border-gray-200">
+  <div class="w-full flex items-center justify-between">
+    <div id="menu" class="md:block hidden">
+      <nav class="flex items-center space-x-8">
+        <a href="/" class="hover:text-black {% if page.url == '/' %}text-black{% else %}text-gray-500{% endif %}">WORK</a>
+        <a href="/about/" class="hover:text-black {% if page.url == '/about/' or page.url == '/about' %}text-black{% else %}text-gray-500{% endif %}">ABOUT</a>
+        <a href="/contact/" class="hover:text-black {% if page.url == '/contact/' or page.url == '/contact' %}text-black{% else %}text-gray-500{% endif %}">CONTACT</a>
+      </nav>
+    </div>
+
+    <div id="logo">
+      <a href="/" class="flex justify-center">
+        <img width="138" height="120" src="/img/assets/logo.png" alt="Sylvie Broeker" />
+      </a>
+    </div>
+
+ <button id="mobile-menu-button" class="md:hidden">
+      <svg class="w-6 h-6 fill-current text-black" viewBox="0 0 24 24" id="hamburger-icon">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+      </svg>
+      <svg class="w-6 h-6 fill-current text-black hidden" viewBox="0 0 24 24" id="close-icon">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.829-4.828 4.829a1 1 0 0 1-1.414-1.414l4.829-4.828-4.829-4.828a1 1 0 0 1 1.414-1.414l4.828 4.828 4.829-4.828a1 1 0 0 1 1.414 1.414l-4.828 4.829z"/>
+      </svg>
+    </button>
+
+    <div id="icons" class="md:block hidden">
+      <a href="/" aria-label="Home">
+        {% include "icons/insta.svg" %}
+      </a>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-white z-10 flex flex-col items-center justify-start pt-32">
+    <nav class="flex flex-col items-center space-y-6">
+      <a href="/" class="text-xl hover:text-black {% if page.url == '/' %}text-black{% else %}text-gray-500{% endif %}">WORK</a>
+      <a href="/about/" class="text-xl hover:text-black {% if page.url == '/about/' or page.url == '/about' %}text-black{% else %}text-gray-500{% endif %}">ABOUT</a>
+      <a href="/contact/" class="text-xl hover:text-black {% if page.url == '/contact/' or page.url == '/contact' %}text-black{% else %}text-gray-500{% endif %}">CONTACT</a>
+    </nav>
+    <div id="icons-mobile" class="mt-auto mb-8">
+      <a href="/" aria-label="Home">
+        {% include "icons/insta.svg" %}
+      </a>
+    </div>
+  </div>
+</div>
   <main>
     {% block content %}
       {{ content | safe }}
     {% endblock %}
   </main>
 </body>
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  if (mobileMenuButton && mobileMenu && hamburgerIcon && closeIcon) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const isMenuOpen = !mobileMenu.classList.contains('hidden');
+      hamburgerIcon.classList.toggle('hidden', isMenuOpen);
+      closeIcon.classList.toggle('hidden', !isMenuOpen);
+    });
+  }
+</script>
 </html>

@@ -6,7 +6,7 @@ _site/
 
 # Tailwind output
 src/styles/site.css
-
+dist
 # Build logs
 npm-debug.log*
 yarn-debug.log*

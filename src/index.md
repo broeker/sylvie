@@ -1,13 +1,17 @@
 ---
 layout: base.njk
-title: Worker 
+title: sylvie broeker 
 permalink: /
 ---
 
+<div id="header">
+<h1 class="font-montserrat text-center">hello!</h1> 
+</div>
 
-# hello! 
-
+<div id="hero" class="text-lg">
 art and design by sylvie broeker, in minneapolis. thanks for looking!
+</div>
+
 
 <div class="post-thumbnails">
   {% for post in collections.posts %}

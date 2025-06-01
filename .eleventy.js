@@ -4,10 +4,16 @@ import path from 'path';
 import cssnano from 'cssnano';
 import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+
 
 export default function(eleventyConfig) {
+    // 11ty image
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+
     //compile tailwind before eleventy processes the files
     eleventyConfig.on('eleventy.before', async () => {
+
         const tailwindInputPath = path.resolve('./src/assets/styles/index.css');
 
         const tailwindOutputPath = './dist/assets/styles/index.css';
