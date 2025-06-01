@@ -26,7 +26,7 @@
       </a>
     </div>
 
- <button id="mobile-menu-button" class="md:hidden">
+ <button id="mobile-menu-button" class="md:hidden ml-auto">
       <svg class="w-6 h-6 fill-current text-black" viewBox="0 0 24 24" id="hamburger-icon">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
       </svg>
@@ -41,18 +41,18 @@
       </a>
     </div>
   </div>
+</div>
 
-  <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-white z-10 flex flex-col items-center justify-start pt-32">
-    <nav class="flex flex-col items-center space-y-6">
-      <a href="/" class="text-xl hover:text-black {% if page.url == '/' %}text-black{% else %}text-gray-500{% endif %}">WORK</a>
-      <a href="/about/" class="text-xl hover:text-black {% if page.url == '/about/' or page.url == '/about' %}text-black{% else %}text-gray-500{% endif %}">ABOUT</a>
-      <a href="/contact/" class="text-xl hover:text-black {% if page.url == '/contact/' or page.url == '/contact' %}text-black{% else %}text-gray-500{% endif %}">CONTACT</a>
-    </nav>
-    <div id="icons-mobile" class="mt-auto mb-8">
-      <a href="/" aria-label="Home">
-        {% include "icons/insta.svg" %}
-      </a>
-    </div>
+<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-white z-10 flex flex-col items-center justify-start pt-32">
+  <nav class="flex flex-col items-center space-y-6">
+    <a href="/" class="text-xl hover:text-black {% if page.url == '/' %}text-black{% else %}text-gray-500{% endif %}">WORK</a>
+    <a href="/about/" class="text-xl hover:text-black {% if page.url == '/about/' or page.url == '/about' %}text-black{% else %}text-gray-500{% endif %}">ABOUT</a>
+    <a href="/contact/" class="text-xl hover:text-black {% if page.url == '/contact/' or page.url == '/contact' %}text-black{% else %}text-gray-500{% endif %}">CONTACT</a>
+  </nav>
+  <div id="icons-mobile" class="mt-auto mb-8">
+    <a href="/" aria-label="Home">
+      {% include "icons/insta.svg" %}
+    </a>
   </div>
 </div>
   <main>
@@ -66,13 +66,19 @@
   const mobileMenu = document.getElementById('mobile-menu');
   const hamburgerIcon = document.getElementById('hamburger-icon');
   const closeIcon = document.getElementById('close-icon');
+  const headerElement = document.getElementById('header');
+  const logoElement = document.getElementById('logo');
 
-  if (mobileMenuButton && mobileMenu && hamburgerIcon && closeIcon) {
+  if (mobileMenuButton && mobileMenu && hamburgerIcon && closeIcon && headerElement && logoElement) {
     mobileMenuButton.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
       const isMenuOpen = !mobileMenu.classList.contains('hidden');
       hamburgerIcon.classList.toggle('hidden', isMenuOpen);
       closeIcon.classList.toggle('hidden', !isMenuOpen);
+      headerElement.classList.toggle('border-b-1', !isMenuOpen);
+      headerElement.classList.toggle('border-gray-200', !isMenuOpen);
+      // toggle visibility (invisible preserves layout height)
+      logoElement.classList.toggle('invisible', isMenuOpen);
     });
   }
 </script>

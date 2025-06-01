@@ -5,10 +5,10 @@ permalink: /
 ---
 
 <div id="header">
-<h1 class="font-montserrat text-center">hello!</h1> 
+<h1 class="font-montserrat text-center text-3xl mb-8 ">hello!</h1> 
 </div>
 
-<div id="hero" class="text-lg">
+<div id="hero" class="text-center text-md text-gray-500">
 art and design by sylvie broeker, in minneapolis. thanks for looking!
 </div>
 
