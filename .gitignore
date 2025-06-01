@@ -1,0 +1,23 @@
+# Node dependencies
+node_modules/
+
+# Eleventy output
+_site/
+
+# Tailwind output
+src/styles/site.css
+
+# Build logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# dotenv files (if used for secrets or env vars)
+.env
+.idea

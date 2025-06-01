@@ -7,7 +7,7 @@ permalink: /
 
 # hello! 
 
-<div class="text-3xl font-bold">art and design by sylvie broeker, in minneapolis. thanks for looking!</div>
+art and design by sylvie broeker, in minneapolis. thanks for looking!
 
 <div class="post-thumbnails">
   {% for post in collections.posts %}
