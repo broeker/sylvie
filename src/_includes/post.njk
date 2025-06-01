@@ -1,11 +1,48 @@
 {% extends "base.njk" %}
 {% block content %}
-  <h1 class="text-3xl font-bold">{{ title }}</h1>
-n
-
-  {% if image %}
-    <img src="{{ image }}" alt="{{ title }}" style="max-width: 100%; height: auto;">
-  {% endif %}
-
-  {{ content | safe }}
+<div class="bg-gray-200 pt-32 pb-32">
+  <h1 class="text-3xl font-montserrat text-center uppercase font-bold mb-4">{{ title }}</h1>
+  <div class="text-center text-gray-500 font-montserrat mb-32">
+    {{ description }}
+  </div>
+  <div class="mr-32 ml-32">
+   {{ content | safe }}
+  </div>
+  </div>
 {% endblock %}
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const imageContainers = document.querySelectorAll('.relative'); // Target the relative containers
+
+  imageContainers.forEach(container => {
+    const img = container.querySelector('img');
+    const overlay = container.querySelector('.absolute');
+
+    if (img && overlay) {
+      overlay.addEventListener('click', () => {
+        // Create the popup
+        const popup = document.createElement('div');
+        popup.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'h-full', 'bg-black', 'bg-opacity-90', 'z-50', 'flex', 'items-center', 'justify-center');
+
+        const popupImage = document.createElement('img');
+        popupImage.src = img.src;
+        popupImage.alt = img.alt;
+        popupImage.classList.add('max-w-full', 'max-h-full');
+
+        const closeButton = document.createElement('button');
+        closeButton.innerText = 'Close';
+        closeButton.classList.add('absolute', 'top-4', 'right-4', 'bg-gray-300', 'text-black', 'p-2', 'rounded-md', 'cursor-pointer', 'z-50');
+        closeButton.addEventListener('click', () => {
+          document.body.removeChild(popup);
+        });
+
+        popup.appendChild(popupImage);
+        popup.appendChild(closeButton);
+        document.body.appendChild(popup);
+      });
+    }
+
+  });
+});
+</script>

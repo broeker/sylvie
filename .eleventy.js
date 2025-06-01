@@ -8,6 +8,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 
 export default function(eleventyConfig) {
+
     // 11ty image
     eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 

@@ -1,6 +1,7 @@
 ---
 layout: post.njk
-title: My Second Post
+title: Quilts
+subtitle: 2023
 date: 2025-05-30
 tags: post
 image: /img/quilt1.png
