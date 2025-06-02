@@ -12,12 +12,12 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const containers = Array.from(document.querySelectorAll('.relative'));
-  const images = containers.map(c => c.querySelector('img')).filter(img => img);
+  const containers = Array.from(document.querySelectorAll('.relative'))
+    .filter(c => c.querySelector('img') && c.querySelector('.absolute'));
+  const images = containers.map(c => c.querySelector('img'));
 
   containers.forEach((container, index) => {
     const overlay = container.querySelector('.absolute');
-    if (!overlay) return;
 
     overlay.addEventListener('click', () => {
       let currentIndex = index;
