@@ -8,7 +8,35 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 
 export default function(eleventyConfig) {
+    // Nunjucks Shortcode
+    eleventyConfig.addShortcode("imageStart", function(content) {
+        return `<div class="relative">`;
+    });
+    eleventyConfig.addShortcode("imageEnd", function(content) {
+        return `<div class="absolute inset-0 flex items-center justify-center bg-black opacity-0 hover:opacity-50 transition-opacity duration-200 cursor-pointer">
+      <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+    </div>
+  </div>`;
+    });
 
+    eleventyConfig.addShortcode("imageGrid", function (images) {
+        return `<div class="mt-32 grid grid-cols-1 sm:grid-cols-2 gap-8">
+      ${images
+            .map(
+                (img) => `
+        <div class="relative">
+          <img class="block w-full h-auto" src="${img.src}" alt="${img.alt}" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black opacity-0 hover:opacity-50 transition-opacity duration-200 cursor-pointer">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+        </div>`
+            )
+            .join("")}
+    </div>`;
+    });
     // 11ty image
     eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
