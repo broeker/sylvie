@@ -11,8 +11,8 @@
 <body>
 <div id="wrapper">
 <div id="header" class="relative w-full h-120px flex items-center justify-between p-0 border-b-1 bg-white border-gray-200">
-  <div class="w-full flex items-center justify-between">
-    <div id="menu" class="ml-12 md:block hidden">
+  <div class="w-full flex items-center justify-between md:grid md:grid-cols-3 md:items-center">
+    <div id="menu" class="ml-12 md:block hidden md:justify-self-start">
       <nav class="flex items-center space-x-8">
         <a href="/" class="hover:text-black {% if page.url == '/' %}text-black{% else %}text-gray-500{% endif %}">WORK</a>
         <a href="/about/" class="hover:text-black {% if page.url == '/about/' or page.url == '/about' %}text-black{% else %}text-gray-500{% endif %}">ABOUT</a>
@@ -20,7 +20,7 @@
       </nav>
     </div>
 
-    <div id="logo">
+    <div id="logo" class="md:justify-self-center">
       <a href="/" class="flex justify-center">
         <img width="138" height="120" src="/img/assets/logo.png" alt="Sylvie Broeker" />
       </a>
@@ -35,7 +35,7 @@
       </svg>
     </button>
 
-    <div id="icons" class="mr-16 md:block hidden">
+    <div id="icons" class="mr-16 md:block hidden md:justify-self-end">
       <a href="/" aria-label="Home">
         {% include "icons/insta.svg" %}
       </a>
