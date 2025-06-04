@@ -86,4 +86,24 @@
     });
   }
 </script>
+{% if page.url == '/' %}
+<script>
+  window.addEventListener('load', function() {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('cat-slide-animation');
+    wrapper.style.position = 'fixed';
+    wrapper.style.top = '10%';
+    wrapper.style.left = '0';
+    wrapper.style.zIndex = '50';
+
+    const cat = document.createElement('img');
+    cat.src = '/img/cat.jpg';
+    cat.alt = 'Cat with balloon';
+    cat.classList.add('cat-float-animation');
+
+    wrapper.appendChild(cat);
+    document.body.appendChild(wrapper);
+  });
+</script>
+{% endif %}
 </html>
