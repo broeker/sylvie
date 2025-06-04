@@ -6,6 +6,7 @@ description: sweetbe is a packaging design project, featuring a proposed cold pr
 date: 2025-05-10
 tags: post
 image: /img/sweetbe1.png
+background: white
 ---
 {% imageStart  %}
 <img src="/img/sweetbe1.png" class="mb-32" alt="foo" />

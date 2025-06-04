@@ -12,7 +12,7 @@ permalink: /
 art and design by sylvie broeker, in minneapolis. thanks for looking!
   </div>
 
-  <div class="text-center mb-32">
+  <div id="scroll-down" class="text-center mb-32 cursor-pointer">
     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
     </svg>
@@ -21,7 +21,7 @@ art and design by sylvie broeker, in minneapolis. thanks for looking!
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
   {% for post in collections.posts %}
     {% if post.data.image %}
-<div class="id="posts" relative overflow-hidden w-full aspect-[3/4]">
+<div id="posts" class="relative overflow-hidden w-full aspect-[3/4]">
       <a href="{{ post.url }}" class="block w-full h-full">
         <img
           src="{{ post.data.image }}"

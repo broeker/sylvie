@@ -6,8 +6,7 @@ description: film photos shot by sylvie. oregon, march 2022.
 date: 2025-05-01
 tags: post
 image: /img/oregonA4.jpg
-
-
+background: white
 ---
 
 

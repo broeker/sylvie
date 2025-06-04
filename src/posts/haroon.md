@@ -6,6 +6,7 @@ description: human alphabet, featuring Haroon Rasheed.
 date: 2025-05-05
 tags: post
 image: /img/haroon.png
+background: white
 ---
 {% imageStart  %}
 <img src="/img/haroon.png" class="mb-32" alt="foo" />

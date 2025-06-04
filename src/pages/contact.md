@@ -4,15 +4,16 @@ title: Contact
 permalink: /contact/
 ---
 
-email me!
+
+<div id="header" class="mt-16">
+<h1 class="font-montserrat text-center text-sm mb-8 ">email me!</h1> 
+</div>
 
 <form
   action="https://formspree.io/f/your-form-id"
   method="POST"
-  class="max-w-xl mx-auto space-y-6 bg-white p-6 rounded-lg shadow"
+  class="max-w-xl mx-auto space-y-6 bg-white p-6 mb-32"
 >
-  <h2 class="text-2xl font-semibold text-gray-800">Contact Me</h2>
-
   <div>
     <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
     <input
@@ -20,7 +21,7 @@ email me!
       name="name"
       id="name"
       required
-      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+      class="mt-1 block w-full p-2 border border-gray-300  focus:border-blue-500 focus:ring-blue-500"
     />
   </div>
 
@@ -31,18 +32,18 @@ email me!
       name="email"
       id="email"
       required
-      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+      class="mt-1 block w-full p-2  border border-gray-300  focus:border-blue-500 focus:ring-blue-500"
     />
   </div>
 
   <div>
-    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+    <label for="message" class="block p-2 text-sm font-medium text-gray-700">Message</label>
     <textarea
       name="message"
       id="message"
       rows="5"
       required
-      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+      class="mt-1 block w-full border border-gray-300  focus:border-blue-500 focus:ring-blue-500"
     ></textarea>
   </div>
 
@@ -54,8 +55,8 @@ email me!
 
 <button
 type="submit"
-class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700">
-    Send Message
+class="w-auto bg-black text-white font-semibold py-2 px-4 rounded hove:bg-blue-700">
+zoom zoom
   </button>
 </form>
 

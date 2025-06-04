@@ -6,7 +6,7 @@ description: experimental quilt designs. inspired by scandinavian quilt patterns
 date: 2025-05-28
 tags: post
 image: /img/quilt1.png
-order: 2
+background: white
 ---
 <div class="mt-32 grid grid-cols-1 sm:grid-cols-2 gap-8">
 

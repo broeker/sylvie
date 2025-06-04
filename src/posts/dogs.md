@@ -6,6 +6,7 @@ description: tim's dog collection is a pattern developed by photographing & digi
 date: 2025-05-15
 tags: post
 image: /img/dog2.png
+background: white
 
 
 ---

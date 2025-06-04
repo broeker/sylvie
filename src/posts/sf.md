@@ -6,6 +6,7 @@ description: film photos shot by sylvie. san francisco, march 2024.
 date: 2025-04-25
 tags: post
 image: /img/sf6.jpg
+background: white
 ---
 <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
 {% imageStart %}

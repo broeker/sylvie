@@ -6,6 +6,7 @@ description: milo, shot by sylvie. january 2023, ne minneapolis.
 date: 2025-04-30
 tags: post
 image: /img/milo2.jpg
+background: white
 ---
 <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
 {% imageStart %}

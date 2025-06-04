@@ -6,8 +6,7 @@ description: a handful of flyers, most designed for Frog Tree Farm in 2024.
 date: 2025-05-31
 tags: post
 image: /img/flyer1.png
-
-
+background: gray-200
 ---
 {% imageStart  %}
 <img src="/img/flyer1.png" class="mb-32" alt="foo" />
