@@ -9,41 +9,44 @@ image: /img/sf6.jpg
 ---
 <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
 {% imageStart %}
-<img class="w-full" src="/img/sf1.jpg" alt="sf" />
+<img class="w-full" src="/img/sf1.jpeg" alt="sf" />
 {% imageEnd %}  
 {% imageStart %}
 <img class="w-full" src="/img/sf4.jpg" alt="sf" />
 {% imageEnd %}  
 {% imageStart %}
-<img class="w-full" src="/img/sf7.jpg" alt="sf" />
+<img class="w-full" src="/img/sf7.jpeg" alt="sf" />
 {% imageEnd %}  
 {% imageStart %}
-<img class="w-full" src="/img/sf10.jpg" alt="sf" />
+<img class="w-full" src="/img/sf10.jpeg" alt="sf" />
 {% imageEnd %}  
 
 {% imageStart %}
-<img class="w-full" src="/img/sf2.jpg" alt="sf" />
+<img class="w-full" src="/img/sf2.jpeg" alt="sf" />
 {% imageEnd %}  
 {% imageStart %}
 <img class="w-full" src="/img/sf5.jpg" alt="sf" />
 {% imageEnd %}  
 {% imageStart %}
-<img class="w-full" src="/img/sf8.jpg" alt="sf" />
+<img class="w-full" src="/img/sf8.jpeg" alt="sf" />
 {% imageEnd %}  
 {% imageStart %}
-<img class="w-full" src="/img/sf11.jpg" alt="sf" />
+<img class="w-full" src="/img/sf11.jpeg" alt="sf" />
 {% imageEnd %}  
 {% imageStart %}
 
-<img class="w-full" src="/img/sf3.jpg" alt="sf" />
+<img class="w-full" src="/img/sf3.jpeg" alt="sf" />
 {% imageEnd %}  
 {% imageStart %}
 <img class="w-full" src="/img/sf6.jpg" alt="sf" />
 {% imageEnd %}  
 {% imageStart %}
-<img class="w-full" src="/img/sf9.jpg" alt="sf" />
+<img class="w-full" src="/img/sf9.jpeg" alt="sf" />
 {% imageEnd %}  
 {% imageStart %}
-<img class="w-full" src="/img/sf12.jpg" alt="sf" />
+<img class="w-full" src="/img/sf12.jpeg" alt="sf" />
+{% imageEnd %}  
+{% imageStart %}
+<img class="w-full" src="/img/sf13.jpeg" alt="sf" />
 {% imageEnd %}  
 </div>
