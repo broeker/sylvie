@@ -21,7 +21,7 @@ art and design by sylvie broeker, in minneapolis. thanks for looking!
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
   {% for post in collections.posts %}
     {% if post.data.image %}
-<div class="relative overflow-hidden w-full aspect-[3/4]">
+<div class="id="posts" relative overflow-hidden w-full aspect-[3/4]">
       <a href="{{ post.url }}" class="block w-full h-full">
         <img
           src="{{ post.data.image }}"
