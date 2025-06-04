@@ -29,6 +29,7 @@ image: /img/oregonA4.jpg
 <img class="block w-full h-auto" src="/img/oregonA4.jpg" alt="foo" />
 {% imageEnd %}
 </div>
+
 {% imageStart %}
 <img class="block mt-12 mb-0 w-full h-auto" src="/img/oregonB1.jpeg" alt="foo" />
 {% imageEnd %}
@@ -44,7 +45,7 @@ image: /img/oregonA4.jpg
 
 </div>
 
-<div id="oregonD" class="mt-0 grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div id="oregonD" class="mt-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
 {% imageStart %}
 <img class="block mt-12 w-full h-auto" src="/img/oregonD1.jpg" alt="foo" />
@@ -56,3 +57,7 @@ image: /img/oregonA4.jpg
 <img class="block mt-12 w-full h-auto" src="/img/oregonD3.jpg" alt="foo" />
 {% imageEnd %}
 </div>
+
+{% imageStart %}
+<img class="block mt-12 w-full h-auto" src="/img/oregonE1.jpeg" alt="foo" />
+{% imageEnd %}
