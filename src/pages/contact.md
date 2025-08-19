@@ -10,7 +10,7 @@ permalink: /contact/
 </div>
 
 <form
-  action="https://formspree.io/f/your-form-id"
+  action="https://formspree.io/f/xyyeyzgo"
   method="POST"
   class="max-w-xl mx-auto space-y-6 bg-white p-6 mb-32"
 >
