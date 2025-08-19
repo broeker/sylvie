@@ -37,8 +37,22 @@ export default function(eleventyConfig) {
             .join("")}
     </div>`;
     });
-    // 11ty image
-    eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+    // 11ty image (HTML transformer) — prefix-aware
+    const prefix = process.env.ELEVENTY_PATH_PREFIX || "/";
+
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+        // Write optimized images into your output folder:
+        outputDir: "dist/img",
+        // And make the URLs it writes in HTML include the Pages subpath:
+        urlPath: `${prefix}img/`,
+
+        // Optional, but recommended for UX:
+        defaultAttributes: { loading: "lazy", decoding: "async" },
+
+        // You can tune formats/widths later; keeping defaults for now.
+        // formats: ["webp", "jpeg"],
+        // widths: [800, 1600],
+    });
 
     //compile tailwind before eleventy processes the files
     eleventyConfig.on('eleventy.before', async () => {
