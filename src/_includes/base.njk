@@ -137,8 +137,8 @@
     wrapper.style.zIndex = '50';
 
     const cat = document.createElement('img');
-    cat.src = '/img/possum.png';
-    cat.alt = 'Cat with balloon';
+    cat.src = "{{ '/img/possum.png' | url }}";
+    cat.alt = 'Possum';
     cat.classList.add('cat-float-animation');
 
     const link = document.createElement('a');
