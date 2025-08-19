@@ -22,7 +22,7 @@ art and design by sylvie broeker, in minneapolis. thanks for looking!
   {% for post in collections.posts %}
     {% if post.data.image %}
 <div id="posts" class="relative overflow-hidden w-full aspect-[3/4]">
-      <a href="{{ post.url }}" class="block w-full h-full">
+      <a href="{{ post.url | url }}" class="block w-full h-full">
         <img
           src="{{ post.data.image }}"
           alt="{{ post.data.title }}"

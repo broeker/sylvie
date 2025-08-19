@@ -14,14 +14,14 @@
   <div class="w-full flex items-center justify-between md:grid md:grid-cols-3 md:items-center">
     <div id="menu" class="ml-12 md:block hidden md:justify-self-start">
       <nav class="flex items-center space-x-8">
-        <a href="/" class="hover:text-black {% if page.url == '/' %}text-black{% else %}text-gray-500{% endif %}">WORK</a>
-        <a href="/about/" class="hover:text-black {% if page.url == '/about/' or page.url == '/about' %}text-black{% else %}text-gray-500{% endif %}">ABOUT</a>
-        <a href="/contact/" class="hover:text-black {% if page.url == '/contact/' or page.url == '/contact' %}text-black{% else %}text-gray-500{% endif %}">CONTACT</a>
+        <a href=" {{ '/' | url }}" class="hover:text-black {% if page.url == '/' %}text-black{% else %}text-gray-500{% endif %}">WORK</a>
+        <a href="{{ '/about/' | url }}" class="hover:text-black {% if page.url == '/about/' or page.url == '/about' %}text-black{% else %}text-gray-500{% endif %}">ABOUT</a>
+        <a href="{{ '/contact/' | url }}" class="hover:text-black {% if page.url == '/contact/' or page.url == '/contact' %}text-black{% else %}text-gray-500{% endif %}">CONTACT</a>
       </nav>
     </div>
 
     <div id="logo" class="md:justify-self-center">
-      <a href="/" class="flex justify-center">
+      <a href="{{ '/' | url }}" class="flex justify-center">
         <img width="138" height="120" src="/img/assets/logo.png" alt="Sylvie Broeker" />
       </a>
     </div>
@@ -36,7 +36,7 @@
     </button>
 
     <div id="icons" class="mr-16 md:block hidden md:justify-self-end">
-      <a href="/" aria-label="Home">
+      <a href="{{ '/' | url }}" aria-label="Home">
         {% include "icons/insta.svg" %}
       </a>
     </div>
@@ -45,12 +45,12 @@
 
 <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-white z-10 flex flex-col items-center justify-start pt-32">
   <nav class="flex flex-col items-center space-y-6">
-    <a href="/" class="text-xl hover:text-black {% if page.url == '/' %}text-black{% else %}text-gray-500{% endif %}">WORK</a>
-    <a href="/about/" class="text-xl hover:text-black {% if page.url == '/about/' or page.url == '/about' %}text-black{% else %}text-gray-500{% endif %}">ABOUT</a>
-    <a href="/contact/" class="text-xl hover:text-black {% if page.url == '/contact/' or page.url == '/contact' %}text-black{% else %}text-gray-500{% endif %}">CONTACT</a>
+    <a href="{{ '/' | url }}" class="text-xl hover:text-black {% if page.url == '/' %}text-black{% else %}text-gray-500{% endif %}">WORK</a>
+    <a href="{{ '/about/' | url }}" class="text-xl hover:text-black {% if page.url == '/about/' or page.url == '/about' %}text-black{% else %}text-gray-500{% endif %}">ABOUT</a>
+    <a href="{{ '/contact/' | url }}" class="text-xl hover:text-black {% if page.url == '/contact/' or page.url == '/contact' %}text-black{% else %}text-gray-500{% endif %}">CONTACT</a>
   </nav>
   <div id="icons-mobile" class="mt-auto mb-8">
-    <a href="/" aria-label="Home">
+    <a href="{{ '/' | url }}/" aria-label="Home">
       {% include "icons/insta.svg" %}
     </a>
   </div>
@@ -61,7 +61,7 @@
     {% endblock %}
   </main>
 <div id="footer" class="font-montserrat text-xs text-gray-500 relative w-full h-auto p-4 border-t-1 bg-white border-gray-200 flex justify-between">
-  <div><a href="/">sylvie broeker</a></div>
+  <div><a href="{{ '/' | url }}">sylvie broeker</a></div>
   <div class="text-right">HTML, CSS, and JS handmade with 🖤 in minneapolis</div>
   </div>
 
