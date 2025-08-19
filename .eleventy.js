@@ -88,5 +88,6 @@ export default function(eleventyConfig) {
             output: "dist",
             includes: "_includes",
         },
+        pathPrefix: process.env.ELEVENTY_PATH_PREFIX || "/",
     };
 }
