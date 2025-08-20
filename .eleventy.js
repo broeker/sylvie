@@ -39,7 +39,7 @@ export default function(eleventyConfig) {
     });
     // ICO
     eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "favicon.ico" });
-
+    eleventyConfig.addPassthroughCopy({ "src/assets/screenshot.png": "assets/screenshot.png" });
     // 11ty image (HTML transformer) — prefix-aware
     const prefix = process.env.ELEVENTY_PATH_PREFIX || "/";
 
