@@ -38,7 +38,7 @@ export default function(eleventyConfig) {
     </div>`;
     });
     // ICO
-    eleventyConfig.addPassthroughCopy({ "src/assets.favicon.ico": "favicon.ico" });
+    eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "favicon.ico" });
 
     // 11ty image (HTML transformer) — prefix-aware
     const prefix = process.env.ELEVENTY_PATH_PREFIX || "/";
