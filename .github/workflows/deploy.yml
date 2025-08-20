@@ -35,6 +35,9 @@ jobs:
           ELEVENTY_PATH_PREFIX: ${{ steps.prefix.outputs.value }}
         run: npm run build
 
+      - name: Add CNAME to publish dir
+        run: echo sylviebroeker.com > dist/CNAME
+
       - name: Upload artifact (dist)
         uses: actions/upload-pages-artifact@v3
         with:
