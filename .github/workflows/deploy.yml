@@ -30,12 +30,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Compute pathPrefix
-        id: prefix
-        run: |
-          # Always treat this as a project page, so prefix = /repo-name/
-          echo "value=/${GITHUB_REPOSITORY##*/}/" >> $GITHUB_OUTPUT
-
       - name: Build 11ty
         env:
           ELEVENTY_PATH_PREFIX: ${{ steps.prefix.outputs.value }}
