@@ -3,7 +3,7 @@ layout: post.njk
 title: Quilts
 subtitle: 2023
 description: experimental quilt designs. inspired by scandinavian quilt patterns.
-date: 2025-05-28
+date: 2025-05-05
 tags: post
 image: /img/quilt1.png
 background: white
