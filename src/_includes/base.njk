@@ -55,11 +55,13 @@
     </a>
   </div>
 </div>
-  <main>
+<div class="pr-4 ml-4">
+  <main >
     {% block content %}
       {{ content | safe }}
     {% endblock %}
   </main>
+ </div>
 <div id="footer" class="font-montserrat text-xs text-gray-500 relative w-full h-auto p-4 border-t-1 bg-white border-gray-200 flex justify-between">
   <div><a href="{{ '/' | url }}">sylvie broeker</a></div>
   <div class="text-right">HTML, CSS, and JS handmade with 🖤 in minneapolis</div>
