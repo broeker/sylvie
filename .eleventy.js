@@ -57,6 +57,12 @@ export default function(eleventyConfig) {
         // widths: [800, 1600],
     });
 
+    // Make absolute URLs from a base + path
+    eleventyConfig.addFilter("absoluteUrl", (p, base) => {
+        try { return new URL(p, base).toString(); }
+        catch { return p; } // if p is already absolute or bad input
+    });
+
     //compile tailwind before eleventy processes the files
     eleventyConfig.on('eleventy.before', async () => {
 
