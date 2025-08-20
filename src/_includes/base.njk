@@ -8,12 +8,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="icon" href="{{ '/favicon.ico' | url }}" sizes="any">
-  {% set socialImage = '/assets/screenshot.png' %}
+  {% set socialImage = '/img/screenshot.png' %}
   <meta property="og:title" content="{{ title or metadata.siteName }}">
   <meta property="og:description" content="{{ description or metadata.description }}">
   <meta property="og:url" content="{{ page.url | url | absoluteUrl(metadata.url) }}">
   <meta property="og:type" content="website">
- <meta property="og:image" content="{{ (socialImage | url | absoluteUrl(metadata.url)) ~ '?v=1' }}">
+ <meta property="og:image" content="{{ (socialImage | url | absoluteUrl(metadata.url)) ~ '?v=2' }}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 </head>
