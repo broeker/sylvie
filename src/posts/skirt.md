@@ -9,9 +9,11 @@ image: /img/skirt1.png
 background: white
 ---
 {% imageStart  %}
-<img src="/img/skirt1a.png" class="mb-32" alt="foo" />
+<img src="/img/skirt2.png"  class="mb-32" alt="foo" />
 {% imageEnd %}
 
 {% imageStart  %}
-<img src="/img/skirt2.png"  class="mb-32" alt="foo" />
+<img src="/img/skirt1a.png" class="mb-32" alt="foo" />
 {% imageEnd %}
+
+

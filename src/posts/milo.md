@@ -3,7 +3,7 @@ layout: post.njk
 title: Milo 
 subtitle: 2023
 description: milo, shot by sylvie. january 2023, ne minneapolis.
-date: 2025-04-30
+date: 2025-04-25
 tags: post
 image: /img/milo2.jpg
 background: white
