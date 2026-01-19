@@ -3,7 +3,7 @@ layout: post.njk
 title: Paintings by Sylvie
 subtitle: 2024
 description: paint.
-date: 2025-04-30
+date: 2025-05-15
 tags: post
 image: /img/painting1.jpg
 background: white
